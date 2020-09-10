@@ -1,0 +1,75 @@
+
+>>>>>>>Calculadora feita no console.log<<<<<<<
+
+using System;
+
+namespace Calculadora
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //declarando as variaveis
+            int num1 = 0; int num2 = 0; //sempre vai inicializar com o numero 0
+
+            //Titulo que vai aparecer
+            Console.WriteLine("Calculadora em c# Console");
+            Console.WriteLine("----------------/n");
+
+            // Perguntando ao usuario o primeiro numero
+            Console.WriteLine("Coloque o prmiero numero e aperte o enter");
+            num1 = Convert.ToInt32(Console.ReadLine());
+
+            //Pergunte ao usuario o segundo numero
+            Console.WriteLine("Coloque o segundo numero e aperte o enter");
+            num2 = Convert.ToInt32(Console.ReadLine());
+
+            //Pergunte ao usuario para escolher uma opção
+            Console.WriteLine("escolha o sinal que vai querer");
+            Console.WriteLine("\ts - Somar");
+            Console.WriteLine("\tsu - Subtrair");
+            Console.WriteLine("\tm - Multiplicar");
+            Console.WriteLine("\td - Dividir");
+            Console.Write("Qual sua escolha?");
+
+            //Use o "Switch" para as contas serem trocadas de somar para subtrair
+
+            switch(Console.ReadLine())
+            {
+                case "s" :
+                    Console.WriteLine($"Seu resultado : {num1} + {num2} = " + (num1 + num2));
+                    break;
+
+                case "su" :
+                    Console.WriteLine($"Seu resultado : {num1} - {num2} = " + (num1 - num2));
+                    break;
+
+                case "m":
+                    Console.WriteLine($"Seu resultado : {num1} * {num2} = " + (num1 * num2));
+                    break;
+
+                case "d":
+                    Console.WriteLine($"Seu resultado : {num1} / {num2} = " + (num1 / num2));
+                    break;
+
+
+                    //Espera o usuario responder e depois fechar
+                    Console.WriteLine("Aperte qualquer tecla para fechar a calculadora");
+                    Console.ReadKey();
+
+
+
+
+
+
+
+
+
+            }
+
+
+
+
+        }
+    }
+}
